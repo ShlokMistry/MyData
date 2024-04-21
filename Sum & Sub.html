@@ -1,0 +1,62 @@
+<html>
+<head>
+</head>
+<body>
+<h1><center>Press button</center></h1><br><br>
+<center><h2 id="count-id">0</h2><br></center>
+<center><button id="btn-1" onclick="increment()">INCREMENT</button>
+<button id="btn-2" onclick="decrement()">DECREMENT</button></center><br>
+<center><button id="btn" onclick="output()">OUTPUT<br></button></center><br>
+<center><button id="btn-3" onclick="sum()">SUM<br></button>
+<button id="btn-4" onclick="sub()">SUB<br></button></center><br>
+<script>
+let a = document.getElementById("count-id")
+let b = document.getElementById("btn")
+let c = document.getElementById("btn-3")
+let d = document.getElementById("btn-4")
+let x = 0
+let count = 0
+let z = 0
+let summ = 0
+let subb = 0
+function increment()
+{
+	count += 1
+	a.textContent = count
+}
+
+function decrement()
+{
+	count -= 1
+	if(count >= 0)
+	{
+		a.textContent = count
+	}
+	else
+	{
+		count = 0
+	}	
+}
+
+function output()
+{
+	summ += count
+	subb -= count
+	x = count + " , "
+	b.innerText += x
+	a.textContent = 0
+	count = 0
+}
+
+function sum()
+{
+	c.innerText = "SUM\n" + summ
+}
+
+function sub()
+{
+	d.innerText = "SUB\n" + subb
+}
+</script>
+</body>
+
