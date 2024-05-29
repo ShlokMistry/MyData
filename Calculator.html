@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Calculator</title>
+<style>
+td{
+	height:40;
+	width:40;
+	text-align: center;
+	color:blue;
+}
+button{
+	height:25;
+	width:50;
+}
+</style>
+</head>
+<body>
+
+<center>
+<h1>Calculator</h1><br><br>
+<table border="4" bordercolor="blue" cellalign="center" height="300" width="500"><tr>
+<td colspan="5"><h1 id="count" align="right"></h1></td></tr>
+
+<tr><td><button id="seven" onClick="seven()">7</button></td>
+<td><button id="eight" onClick="eight()">8</button></td>
+<td><button id="nine" onClick="nine()">9</button></td>
+<td><button id="del" onClick="del()">DEL</button></td>
+<td><button id="ac" onClick="ac()">AC</button><br></td></center></tr>
+
+<tr><td><center><button id="four" onClick="four()">4</button></td>
+<td><button id="five" onClick="five()">5</button></td>
+<td><button id="six" onClick="six()">6</button></td>
+<td><button id="mul" onClick="mul()">MUL</button></td>
+<td><button id="div" onClick="div()">DIV</button><br></center></td></tr>
+
+<tr><td><center><button id="one" onClick="one()">1</button></td>
+<td><button id="two" onClick="two()">2</button></td>
+<td><button id="three" onClick="three()">3</button></td>
+<td><button id="sum" onClick="sum()">SUM</button></td>
+<td><button id="sub" onClick="sub()">SUB</button><br></center></td></tr>
+
+<tr><td colspan="2"><center><button id="zero" onClick="zero()">0</button></td>
+<td><button id="dot" onClick="dot()">.</button></td>
+<td colspan="2"><button id="isequalto" onClick="isequalto()">=</button></td></tr></center>
+</table>
+</body>
+<script>
+let x=document.getElementById("count");
+function zero()
+{
+	x.textContent+=0;
+}
+function one()
+{
+	x.textContent+=1
+}
+function two()
+{
+	x.textContent+=2
+}
+function three()
+{
+	x.textContent+=3
+}
+function four()
+{
+	x.textContent+=4
+}
+function five()
+{
+	x.textContent+=5
+}
+function six()
+{
+	x.textContent+=6
+}
+function seven()
+{
+	x.textContent+=7
+}
+function eight()
+{
+	x.textContent+=8
+}
+function nine()
+{
+	x.textContent+=2
+}
+function dot()
+{
+	x.textContent+= '.'
+}
+function sum()
+{
+	x.textContent+= '+'
+}
+function sub()
+{
+	x.textContent+= '-'
+}
+function mul()
+{
+	x.textContent+= '*'
+}
+function div()
+{
+	x.textContent+= '/'
+}
+function del()
+{
+	x.textContent = x.textContent.slice(0, -1);
+}
+function ac()
+{
+	x.textContent= ' '
+}
+function isequalto()
+{
+	x.textContent=eval(x.textContent);
+}
+</script>
+</html>
